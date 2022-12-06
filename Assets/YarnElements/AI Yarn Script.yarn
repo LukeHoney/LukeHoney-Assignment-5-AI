@@ -1,0 +1,9 @@
+﻿title: NewYarnScript
+tags:
+---
+<<declare $numberExample to 150>>
+<<declare $stringEcxample to "This is the string example">>
+<<declare $boolExample to true>>
+
+Welcome to the world. #line:welcomeline
+===
