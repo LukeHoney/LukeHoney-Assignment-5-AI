@@ -1,0 +1,52 @@
+﻿title: NewYarnScript
+tags:
+---
+<<declare $numberExample to 150>>
+<<declare $stringEcxample to "This is the string example">>
+<<declare $boolExample to true>>
+
+Welcome to the world. #line:welcomeline
+===
+
+title: 1
+tags:
+---
+
+===
+
+title: SecurityBouncer
+tags:
+---
+Have you got your ID? #line:SecurityBouncer1
+
+-> Yes #line:SecurityAndUser1
+    <<jump HasID>>
+
+-> Why do i need one? #line:SecurityAndUser2
+    <<jump WhyID>>
+
+-> No, I haven't. #line:SecurityAndUser3
+
+===
+
+title: HasID
+tags:
+---
+Awesome, Can i see it? #line:HasID1
+
+-> Sure #line:HasID2
+
+-> No, Its Mine #line:HasID3
+===
+
+title: WhyID
+tags:
+---
+Because it is after 8pm you donut! #line:WhyID1
+Do you have it? #line:WhyID2
+
+->Yes #line:WhyID3
+<<jump HasID>>
+
+-> No, I haven't. #line:WhyID4
+===
