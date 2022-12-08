@@ -1,5 +1,11 @@
 ﻿title: Johnscript
 tags:
 ---
-Hello, I am John #line:JohnScript1
+
+===
+
+title: Johnscript1
+tags:
+---
+Hello, I am John #line:JohnScriptline1
 ===

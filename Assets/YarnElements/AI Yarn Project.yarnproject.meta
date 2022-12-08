@@ -11,6 +11,7 @@ ScriptedImporter:
   sourceScripts:
   - {fileID: 6391573757903218779, guid: 0c4d71c129adea945931e7fd0a9415e3, type: 3}
   - {fileID: 6391573757903218779, guid: 6ffc3a41dcb03aa44b5a55d13c89ef76, type: 3}
+  - {fileID: 6391573757903218779, guid: 45609ee085e4d4b4385cdf0e1a8d2f33, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $numberExample
