@@ -10,6 +10,7 @@ ScriptedImporter:
   script: {fileID: 11500000, guid: 053561912b1654d80a424bb0696a74ae, type: 3}
   sourceScripts:
   - {fileID: 6391573757903218779, guid: 0c4d71c129adea945931e7fd0a9415e3, type: 3}
+  - {fileID: 6391573757903218779, guid: 6ffc3a41dcb03aa44b5a55d13c89ef76, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $numberExample
@@ -43,7 +44,7 @@ ScriptedImporter:
   languagesToSourceAssets:
   - languageID: en-GB
     stringsFile: {instanceID: 0}
-    assetsFolder: {fileID: 102900000, guid: 34865a6c44c3a4f9d8c586b0830b3b2d, type: 3}
+    assetsFolder: {fileID: 102900000, guid: a3cda8cce8fe83d4fb5d3e499cfcf485, type: 3}
   useAddressableAssets: 0
   searchAllAssembliesForActions: 1
   assembliesToSearch: []
