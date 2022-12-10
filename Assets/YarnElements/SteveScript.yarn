@@ -1,0 +1,45 @@
+﻿title: SteveScript
+tags:
+---
+<<declare $angerOfGaurd to 0>>
+===
+
+
+title: SteveMove
+tags:
+---
+<<if $angerOfGaurd is 0>>
+<<jump SteveMoveFirst>>
+<<endif>>
+
+<<if $angerOfGaurd is 1>>
+<<jump SteveMoveSecond>>
+<<endif>>
+
+<<if $angerOfGaurd >1>>
+<<jump SteveMoveThird>>
+<<endif>>
+
+===
+
+title:SteveMoveFirst
+tags:
+---
+<<set $angerOfGaurd to $angerOfGaurd +1>>
+Move out my way! #line:SteveMove1
+===
+
+title:SteveMoveSecond
+tags:
+---
+<<set $angerOfGaurd to $angerOfGaurd +1>>
+I've told you, Move out my way! #line:SteveMove2
+===
+
+title:SteveMoveThird
+tags:
+---
+<<set $money to 0>>
+This is the third time! As a fine i am taking all your money. #line:SteveMove3
+
+===

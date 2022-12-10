@@ -1,0 +1,54 @@
+﻿title: HouseScript
+tags:
+---
+<<declare $money to 0>>
+<<declare $ID to false>>
+<<declare $CoatPocketCheck to false>>
+===
+
+
+title: HouseForID
+tags:
+---
+
+Ahh, This is my House, Where should i look?#line:house1
+
+-> Behind the Sofa #line:house2
+    <<jump behindTheSofa>>
+
+-> In my bedside table #line:house4
+    <<set $ID to true>>
+    <<jump bedsideTable>>
+
+
+-> In my coat pocket #line:house3
+    <<jump coatPocket>>
+
+===
+
+title: behindTheSofa
+tags:
+---
+Nope, Nothing here. #line:behindTheSofa
+===
+
+title: coatPocket
+tags:
+---
+<<if $CoatPocketCheck is true>>
+I've Already checked there #line:coatPocketChecked
+<<endif>>
+
+<<if $CoatPocketCheck is false>>
+Nope, Not here but is that a 5 pound note. Yes it is! #line:coatPocket
+<<set $money to $money + 5>>
+<<set $CoatPocketCheck to true>>
+<<endif>>
+===
+
+title: bedsideTable
+tags:
+---
+Yes, there it is! #line:bedsideTable
+
+===

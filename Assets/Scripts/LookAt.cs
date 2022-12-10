@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//code to make object look at the target 
 public class LookAt : MonoBehaviour
 {
-    [SerializeField] private Transform player; //refernce to what chicken has to look at (Bread)
-
+    [SerializeField] private Transform player;
 
     // Update is called once per frame
     void Update()
     {
-        transform.LookAt(player); //code to make object look at the target 
-        
+        transform.LookAt(player);
     }
-
 }

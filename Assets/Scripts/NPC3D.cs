@@ -9,7 +9,7 @@ public class NPC3D : MonoBehaviour
     public YarnProject scriptToLoad;
     public DialogueRunner dialogueRunner; //refernce to the dialogue control
     public GameObject dialogueCanvas; //refernce to the canvas
-    public Vector3 PostionSpeachBubble = new Vector3(0f, 2.0f, 0.0f);
+    public Vector3 PostionSpeachBubble = new Vector3(0f, 3.1f, 0.0f);
     /// </summary>
     // Start is called before the first frame update
     void Start()
@@ -63,6 +63,18 @@ public class NPC3D : MonoBehaviour
                 }
                 Debug.Log("start dialogue");
                 dialogueRunner.StartDialogue(talkToNode);
+            }
+        }
+    }
+
+    //Luke's edit for ending dialogue when leaving collider
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            if (dialogueRunner.IsDialogueRunning)
+            {
+                dialogueRunner.Stop();
             }
         }
     }
