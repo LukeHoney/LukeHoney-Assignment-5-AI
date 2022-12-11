@@ -10,6 +10,7 @@ tags:
 title: AdamFirst
 tags:
 ---
+<<set $spokenToAdam to true>>
 <<if $wishHappyBirthday is 1>>
 mmmmmmmm... #line:AdamOpen
 
@@ -29,7 +30,7 @@ errr... #line:Adam4
 <<endif>>
 
 <<if $wishHappyBirthday is 2>>
-Thanks again for earlier man! #line:Birthday4
+Thanks again for earlier! #line:Birthday4
 <<endif>>
 
 <<if $wishHappyBirthday is 3>>

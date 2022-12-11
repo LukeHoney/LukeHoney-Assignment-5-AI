@@ -1,0 +1,75 @@
+﻿title: SophieScript
+tags:
+---
+<<declare $spokenToAdam=false>>
+<<declare $sophieAnimation="Walking">>
+<<declare $sophieGiveMoney=false>>
+<<declare $sophieSlapped=false>>
+===
+title: SophieFirst
+tags:
+---
+<<set $sophieAnimation="StopWalking">>
+<<sophie_animation_selector YarnCommand>>
+<<if $spokenToAdam is false>>
+Hey, have you spoke with Adam, Its his special day! #line:sophie1
+He is feeling a bit down since nobody in town remembered! #line:sophie2
+<<jump Sophiewalkingaway>>
+<<endif>>
+
+<<if $spokenToAdam is true>>
+    <<if $wishHappyBirthday is 3>>
+        <<jump sophieSad>>
+    <<endif>>
+
+    <<if $wishHappyBirthday is 2>>
+        <<jump SophieHappy>>
+    <<endif>>
+<<endif>>    
+===
+
+title: sophieSad
+tags:
+---
+<<if $sophieSlapped is true>>
+    Go Away you Horrable Person #line:sophie4
+    <<jump Sophiewalkingaway>>
+<<endif>> 
+
+<<if $sophieSlapped is false>>
+    <<set $Health to $Health -1>> 
+    <<set $sophieAnimation="Slap">>
+    <<sophie_animation_selector YarnCommand>>
+    <<set $sophieSlapped=true>>
+    How could you upset Adam like that #line:sophie3
+    <<jump Sophiewalkingaway>>
+<<endif>>   
+===
+
+title: SophieHappy
+tags:
+---
+<<if $sophieGiveMoney is true>>
+    <<set $sophieAnimation="Happy">>
+    Thankyou for cheering Adam up #line:sophie6
+    <<jump Sophiewalkingaway>>
+<<endif>>
+
+<<if $sophieGiveMoney is false>>
+    <<set $money to $money + 5>>
+    <<set $sophieAnimation="Happy">>
+    <<sophie_animation_selector YarnCommand>>
+    Thank you so much for cheering up Adam, here have a fiver #line:sophie5
+    <<set $sophieGiveMoney=true>>
+    <<jump Sophiewalkingaway>>
+<<endif>>
+===
+
+title: Sophiewalkingaway
+tags:
+---
+<<set $sophieAnimation="Walking">>
+<<sophie_animation_selector YarnCommand>>
+===
+
+
