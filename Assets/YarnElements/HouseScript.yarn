@@ -4,6 +4,8 @@ tags:
 <<declare $money to 0>>
 <<declare $ID to false>>
 <<declare $CoatPocketCheck to false>>
+<<declare $BehindSofaCheck to false>>
+<<declare $BedsideTableCheck to false>>
 ===
 
 
@@ -29,7 +31,23 @@ Ahh, This is my House, Where should i look?#line:house1
 title: behindTheSofa
 tags:
 ---
+<<if $BehindSofaCheck is false>>
 Nope, Nothing here. #line:behindTheSofa
+    <<set $BehindSofaCheck to true>>
+Where else should i check? #line:behindTheSofa1
+
+->In my coat pocket #line:behindTheSofa3
+    <<jump coatPocket>>
+
+->In my bedside table #line:behindTheSofa2
+    <<set $ID to true>>
+    <<jump bedsideTable>>
+<<endif>>
+
+<<if $BehindSofaCheck is true>>
+I've Already checked there #line:behindTheSofa4
+<<endif>>
+    
 ===
 
 title: coatPocket
@@ -41,14 +59,29 @@ I've Already checked there #line:coatPocketChecked
 
 <<if $CoatPocketCheck is false>>
 Nope, Not here but is that a 5 pound note. Yes it is! #line:coatPocket
-<<set $money to $money + 5>>
-<<set $CoatPocketCheck to true>>
+    <<set $money to $money + 5>>
+    <<set $CoatPocketCheck to true>>
 <<endif>>
+Where else should i check? #line:coatPocket1
+
+->In my bedside table #line:coatPocket2
+    <<set $ID to true>>
+    <<jump bedsideTable>>
+
+-> Behind the Sofa #line:coatPocket3
+    <<jump behindTheSofa>>
 ===
 
 title: bedsideTable
 tags:
 ---
+<<if $BedsideTableCheck is false>>
 Yes, there it is! #line:bedsideTable
+    <<set $BedsideTableCheck to true>>
+<<endif>>
+
+<<if $BedsideTableCheck is true>>
+I already have my ID why am i still looking? #line:bedsideTable2
+<<endif>>
 
 ===

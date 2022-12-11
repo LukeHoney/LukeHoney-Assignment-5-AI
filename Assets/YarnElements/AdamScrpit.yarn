@@ -1,0 +1,74 @@
+﻿title: AdamScrpit
+tags:
+---
+<<declare $Health to 3>>
+<<declare $AdamEmotion="noEmotion">>
+<<declare $wishHappyBirthday to 1>>
+<<declare $AdamAnnoyed to false>>
+===
+
+title: AdamFirst
+tags:
+---
+<<if $wishHappyBirthday is 1>>
+mmmmmmmm... #line:AdamOpen
+
+Hey, is everything okay? #line:Adam2
+
+See even you don't remember #line:Adam3
+
+errr... #line:Adam4
+-> Happy Wedding Anniversary #line:Adam5
+    <<jump Wedding>>
+
+-> Happy Birthday! #line:Adam6
+    <<jump Birthday>>
+
+-> No i don't, and why would i? i don't care about you. #line:Adam7
+    <<jump fight>>
+<<endif>>
+
+<<if $wishHappyBirthday is 2>>
+Thanks again for earlier man! #line:Birthday4
+<<endif>>
+
+<<if $wishHappyBirthday is 3>>
+<<set $AdamEmotion="Lonely">>
+<<adam_animation_selector YarnCommand>>
+Leave me alone! #line:Birthday5
+<<endif>>
+===
+
+title: Wedding
+tags:
+---
+<<set $wishHappyBirthday to 3>>
+<<set $AdamEmotion="Annoyed">>
+<<adam_animation_selector YarnCommand>>
+Are you serious? I thought i was your friend #line:AdamWedding
+===
+
+title: Birthday
+tags:
+---
+<<if $wishHappyBirthday is 1>>
+<<set $wishHappyBirthday to 2>>
+<<set $AdamEmotion="Happy">>
+<<adam_animation_selector YarnCommand>>
+Ahh! You do remember! #line:Birthday1
+Since you are such a good friend and i am rich here is £5 #line:Birthday2
+<<set $money to $money + 5>>
+Remember friends are more important that money! #line:Birthday3
+<<endif>>
+
+===
+
+title: fight
+tags:
+---
+<<set $wishHappyBirthday to 3>>
+<<set $AdamEmotion="Angry">>
+<<adam_animation_selector YarnCommand>>
+Come on then! #line:fight1
+<<set $Health to $Health -1>>
+===
