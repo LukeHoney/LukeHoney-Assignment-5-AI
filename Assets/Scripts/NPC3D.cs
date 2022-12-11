@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
+
+//Mostly Script supplied by Seb
+//Luke's edit adds a wait to the end of the OnTriggerEnter to stop multiple single dialogue from over lapping
+
+
 public class NPC3D : MonoBehaviour
 {
     public string characterName = "";
@@ -64,18 +69,15 @@ public class NPC3D : MonoBehaviour
                 Debug.Log("start dialogue");
                 dialogueRunner.StartDialogue(talkToNode);
             }
+            StartCoroutine(Wait());
         }
+    }
+    IEnumerator Wait()
+
+    {
+        yield return new WaitForSeconds(1);
+        
     }
 
-    //Luke's edit for ending dialogue when leaving collider
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Player"))
-        {
-            if (dialogueRunner.IsDialogueRunning)
-            {
-                dialogueRunner.Stop();
-            }
-        }
-    }
+    
 }

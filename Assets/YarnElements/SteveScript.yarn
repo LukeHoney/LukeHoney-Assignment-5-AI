@@ -16,7 +16,7 @@ tags:
 <<jump SteveMoveSecond>>
 <<endif>>
 
-<<if $angerOfGaurd >1>>
+<<if $angerOfGaurd >=2>>
 <<jump SteveMoveThird>>
 <<endif>>
 
