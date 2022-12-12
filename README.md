@@ -5,10 +5,10 @@
 The story places the user in MiniVill, a virtual world in which a few people live. The goal for the player is to have interactions with the locals and depending on the users’ actions different outcomes occur with a total of 4 end results. Speaking to the locals you will find out a bit about them but don’t be rude, gossip travels quickly. For example, if you are horrible to Adam, Sophie will know, and you might receive a couple of slaps. Don’t get to many slaps as this could send you to sleep. If you are nice to them, you might be rewarded to. Have fun exploring.
 
 
+https://user-images.githubusercontent.com/115563029/207181996-9d3811a6-f414-4c85-b2a6-8c8cda0d143e.mp4
 
-Need to add video
-
-
+2 Ending are shown above, if you want to see more check out the youtube video (link below) or try it yourself!
+https://www.youtube.com/watch?v=d4yZ36xH9fc
 
 
 ##  Features:
