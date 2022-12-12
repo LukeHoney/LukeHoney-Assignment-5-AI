@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AI.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Death.unity
+    guid: b7fa060223f096b4e858d37f1cac1ade
+  - enabled: 1
+    path: Assets/Scenes/TopDrink.unity
+    guid: fd55e66d4d524ea4fa558df788caca8e
+  - enabled: 1
+    path: Assets/Scenes/Coke.unity
+    guid: 5991588e92e1604419bb22ec4a477a95
+  - enabled: 1
+    path: Assets/Scenes/Water.unity
+    guid: efae37d32b25f2f4c94a77a8cab65f7e
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 9d88fadf3c5385c4bb1a0ab14daf4ddd,
       type: 2}

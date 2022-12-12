@@ -1,7 +1,7 @@
 ﻿title: JamesScrpit
 tags:
 ---
-
+<<declare $drink to "none">>
 ===
 
 title: JamesFirst
@@ -11,13 +11,19 @@ What can i get for you sir? #line:james1
 
 <<if $money >9 >>
     -> The best on the menu #line:james4
+    <<set $drink to "TopDrink">>
+    <<DrinkSelector YarnCommand>>
 <<endif>>
 
 <<if $money >4 >>
     -> A cheap coke #line:james3
+    <<set $drink to "Coke">>
+    <<DrinkSelector YarnCommand>>
 <<endif>>
 
 -> A water please #line:james2
+    <<set $drink to "Water">>
+    <<DrinkSelector YarnCommand>>
 
 
 

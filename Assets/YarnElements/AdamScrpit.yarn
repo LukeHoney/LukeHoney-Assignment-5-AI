@@ -72,4 +72,5 @@ tags:
 <<adam_animation_selector YarnCommand>>
 Come on then! #line:fight1
 <<set $Health to $Health -1>>
+<<Health YarnCommand>>
 ===

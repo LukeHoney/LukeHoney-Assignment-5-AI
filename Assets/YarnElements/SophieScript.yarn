@@ -40,6 +40,7 @@ tags:
     <<set $Health to $Health -1>> 
     <<set $sophieAnimation="Slap">>
     <<sophie_animation_selector YarnCommand>>
+    <<Health YarnCommand>>
     <<set $sophieSlapped=true>>
     How could you upset Adam like that #line:sophie3
     <<jump Sophiewalkingaway>>

@@ -75,13 +75,15 @@ Where else should i check? #line:coatPocket1
 title: bedsideTable
 tags:
 ---
+<<if $BedsideTableCheck is true>>
+I already have my ID why am i still looking? #line:bedsideTable2
+<<endif>>
+
 <<if $BedsideTableCheck is false>>
 Yes, there it is! #line:bedsideTable
     <<set $BedsideTableCheck to true>>
 <<endif>>
 
-<<if $BedsideTableCheck is true>>
-I already have my ID why am i still looking? #line:bedsideTable2
-<<endif>>
+
 
 ===

@@ -45,5 +45,6 @@ tags:
 <<walkingGaurd_animation_selector YarnCommand>>
 <<set $Health to $Health -1>>
 This is the third time! As a fine i am taking all your money. #line:SteveMove3
+<<Health YarnCommand>>
 
 ===
