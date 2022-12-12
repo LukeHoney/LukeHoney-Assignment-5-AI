@@ -8,6 +8,8 @@ public class WalkingGaurdAnimation : MonoBehaviour
     public Animator walkingGaurdAnimator;
     public InMemoryVariableStorage yarnInMemoryStorage;
 
+    //Changes WalkingGaurd's animation depending on yarn values
+
     [YarnCommand("walkingGaurd_animation_selector")]
     public void WalkingGaurdAnimationSelector()
     {

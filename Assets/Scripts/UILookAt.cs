@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UILookAt : MonoBehaviour
 {
-
+    //This Scripts makes the Dialogue Canvas face the player
     private void LateUpdate()
     {
         transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);

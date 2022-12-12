@@ -8,6 +8,8 @@ public class SophieAnimationScript : MonoBehaviour
     public Animator sophieAnimator;
     public InMemoryVariableStorage yarnInMemoryStorage;
 
+    //Changes Sophies's animation depending on yarn values
+
     //Stops Sophies walk if the Player is close by
     private void OnTriggerEnter(Collider other)
     {

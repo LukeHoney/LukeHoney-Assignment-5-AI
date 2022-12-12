@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NavMoveTargetThree : MonoBehaviour
+public class NavMoveTargetTwo : MonoBehaviour
 {
+    //used for the selected npc to follow
+    //Edited for continous changing target which happens in related FollowCubeRandomLocation Script
+
     public NavMeshAgent agent;
     public Transform target;
 

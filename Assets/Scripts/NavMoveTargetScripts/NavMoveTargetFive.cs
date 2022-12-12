@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-//Edited for 
-public class NavAgentMove : MonoBehaviour
+public class NavMoveTargetFive : MonoBehaviour
 {
+    //used for the selected npc to follow
+    //Edited for continous changing target which happens in related FollowCubeRandomLocation Script
+
     public NavMeshAgent agent;
     public Transform target;
 
@@ -18,7 +20,7 @@ public class NavAgentMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        target = GameObject.Find("Following Cube(Clone)").transform;
+        target = GameObject.Find("Following Cube (5)(Clone)").transform;
         agent.SetDestination(target.position);
     }
 }

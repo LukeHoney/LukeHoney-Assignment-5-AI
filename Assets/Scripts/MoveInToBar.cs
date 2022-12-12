@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
+//This Script activate whem the user pays enrty to the security to access the pub, player is teleported inside pub
 public class MoveInToBar : MonoBehaviour
 {
     public Transform teleportTarget;
@@ -10,7 +11,7 @@ public class MoveInToBar : MonoBehaviour
 
     public InMemoryVariableStorage yarnInMemoryStorage;
 
-    //If enrty is paid to the security, player is teleported inside pub
+    
 
     [YarnCommand("teleportToBar")]
     public void teleportToBar()

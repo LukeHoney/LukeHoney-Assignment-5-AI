@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class FolowCubeRandomLocation2 : MonoBehaviour
 {
+    //This Scripts puts a target cube in a random waypoint(set with the array) and then after wait time places the target in another location
+    //This target is used for the selected npc to follow but that is active in the related NavMoveTarget Script
+
     public Transform[] spawnPoints;
     public GameObject cube1;
     public int spawnNumberLocation;
@@ -18,7 +21,7 @@ public class FolowCubeRandomLocation2 : MonoBehaviour
     }
     private void Update()
     {
-        target = GameObject.Find("Following Cube (1)(Clone)");
+        target = GameObject.Find("Following Cube (2)(Clone)");
     }
     public void spawnpoint()
     {
@@ -32,7 +35,7 @@ public class FolowCubeRandomLocation2 : MonoBehaviour
     IEnumerator Wait()
 
     {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(3);
         target.SetActive(false);
         spawnpoint();
 
