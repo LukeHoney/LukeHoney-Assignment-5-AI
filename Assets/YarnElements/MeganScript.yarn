@@ -9,8 +9,9 @@ tags:
 <<set $meganWalk to "no">>
 <<megan_animation_selector YarnCommand>>
 Hello, And Welcome to miniVill #line:Megan1
-Talk to the people around town and then hed to the pub for a drink at the end #line:Magan2
+Talk to the people around town and then head to the pub for a drink at the end #line:Magan2
 It's been a while so remember your house is the one with the tree #line:Megan3
-Try to avoid the covid people, they aren't mean they just don't talk much #line:Megan4
+Try to avoid the covid people, they aren't mean, they just don't talk much #line:Megan4
 But do avoid the knight, he doesn't like people getting in his way #line:Megan5
+Have Fun! #line:Megan6
 ===
