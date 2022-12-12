@@ -1,0 +1,24 @@
+﻿title: JamesScrpit
+tags:
+---
+
+===
+
+title: JamesFirst
+tags:
+---
+What can i get for you sir? #line:james1
+
+<<if $money >9 >>
+    -> The best on the menu #line:james4
+<<endif>>
+
+<<if $money >4 >>
+    -> A cheap coke #line:james3
+<<endif>>
+
+-> A water please #line:james2
+
+
+
+===

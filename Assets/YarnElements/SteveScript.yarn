@@ -2,6 +2,7 @@
 tags:
 ---
 <<declare $angerOfGaurd to 0>>
+<<declare $walkingGaurdAnimation="notAngry">>
 ===
 
 
@@ -40,6 +41,9 @@ title:SteveMoveThird
 tags:
 ---
 <<set $money to 0>>
+<<set $walkingGaurdAnimation="Angry">>
+<<walkingGaurd_animation_selector YarnCommand>>
+<<set $Health to $Health -1>>
 This is the third time! As a fine i am taking all your money. #line:SteveMove3
 
 ===

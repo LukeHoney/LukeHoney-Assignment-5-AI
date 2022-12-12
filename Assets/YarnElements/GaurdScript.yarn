@@ -1,7 +1,8 @@
 ﻿title: GaurdScript
 tags:
 ---
-
+<<declare $lieToGaurd=false>>
+<<declare $paidEntry=true>>
 ===
 
 title: SecurityBouncer
@@ -16,6 +17,7 @@ Hello, Have you got your ID? #line:SecurityBouncer1
     <<jump WhyID>>
 
 -> No, I haven't. #line:SecurityAndUser3
+    <<jump CantComeIn>>
 
 ===
 
@@ -26,10 +28,11 @@ Awesome, Can i see it? #line:HasID1
 
 <<if $ID is true>> 
    
--> Sure #line:HasID2
-    
+    -> Sure #line:HasID2
+        <<jump goInside>>  
 <<endif>> 
     -> No, I lied. #line:HasID3
+        <<set $lieToGaurd=true>>
 ===
 
 title: WhyID
@@ -39,7 +42,32 @@ Because it is after 8pm you donut! #line:WhyID1
 Do you have it? #line:WhyID2
 
 -> Yes #line:WhyID3 
-<<jump HasID>>
+    <<jump HasID>>
 
 -> No, I haven't. #line:WhyID4
+    <<jump CantComeIn>>
+===
+title: CantComeIn
+tags:
+---
+Then You Can Not come in #line:SecurityAndUser4
+===
+
+title: goInside
+tags:
+---
+<<if $lieToGaurd is true>>
+    Thats better... #line:goingin1
+    but because you lie to me the fee to get in is £10 #line:goingin2
+    <<set $money to $money - 10>>
+    <<set $paidEntry=true>>
+    <<teleportToBar YarnCommand>>
+<<endif>>
+
+<<if $lieToGaurd is false>>
+    Perfect, Entry fee is £5 #line:goingin3
+    <<set $money to $money - 5>>
+    <<set $paidEntry=true>>
+    <<teleportToBar YarnCommand>>
+<<endif>>
 ===
