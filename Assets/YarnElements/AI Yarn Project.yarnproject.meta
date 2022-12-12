@@ -15,6 +15,7 @@ ScriptedImporter:
   - {fileID: 6391573757903218779, guid: 313ba1e33baa9b54c9ccea62dd8b6601, type: 3}
   - {fileID: 6391573757903218779, guid: a7973342fd75cb24e87af90179a05e7e, type: 3}
   - {fileID: 6391573757903218779, guid: 689a730f3135050429c0730fc5df484c, type: 3}
+  - {fileID: 6391573757903218779, guid: 6787af6033cbdf14ba1750033f12a7e4, type: 3}
   compileErrors: []
   serializedDeclarations:
   - name: $lieToGaurd
@@ -85,6 +86,15 @@ ScriptedImporter:
     defaultValueBool: 0
     defaultValueNumber: 0
     defaultValueString: 
+    description: 
+    isImplicit: 0
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: de801fcc0bcd2c14aa837546d0f8520b,
+      type: 3}
+  - name: $walkingGaurdAnimation
+    typeName: String
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: notAngry
     description: 
     isImplicit: 0
     sourceYarnAsset: {fileID: 6391573757903218779, guid: de801fcc0bcd2c14aa837546d0f8520b,
@@ -160,6 +170,15 @@ ScriptedImporter:
     description: 
     isImplicit: 0
     sourceYarnAsset: {fileID: 6391573757903218779, guid: a7973342fd75cb24e87af90179a05e7e,
+      type: 3}
+  - name: $meganWalk
+    typeName: String
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: yes
+    description: 
+    isImplicit: 0
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 6787af6033cbdf14ba1750033f12a7e4,
       type: 3}
   defaultLanguage: en-GB
   languagesToSourceAssets:
